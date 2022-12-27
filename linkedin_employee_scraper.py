@@ -50,7 +50,7 @@ def getProfileURLs(companyName):
     invisibleEmployeeList = []
     invisibleEmployees = source.find_all('div', class_='artdeco-entity-lockup artdeco-entity-lockup--stacked-center artdeco-entity-lockup--size-7 ember-view')
     for invisibleguy in invisibleEmployees:
-        title = invisibleguy.findNext('div', class_='lt-line-clamp lt-line-clamp--multi-line ember-view').contents[0].strip('\n').strip('  ')
+        title = invisibleguy.findNext('div', class_='lt-line-clamp lt-line-clamp--multi-line ember-view') #.contents[0].strip('\n').strip('  ')
         invisibleEmployeeList.append(title)
 
         # A profile can either be visible or invisible
